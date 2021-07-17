@@ -1,22 +1,23 @@
-import React from 'react';
-import axios from 'axios';
-import './App.css';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import React from "react";
+import axios from "axios";
+import "./App.css";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
-import Header from '../Header/Header';
-import Feeling from '../../Feeling/Feeling';
-import Understanding from '../../Understanding/Understanding';
-import Support from '../../Support/Support';
-import Comments from '../../Comments/Comments';
+import Header from "../Header/Header";
+import Feeling from "../../Feeling/Feeling";
+import Understanding from "../../Understanding/Understanding";
+import Support from "../../Support/Support";
+import Comments from "../../Comments/Comments";
 
 function App() {
-
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <Feeling />
       <Router>
-        <Route exact path='/formPt2' component={Understanding} />
+        <Route path="/formPt2" exact>
+          <Understanding />
+        </Route>
       </Router>
       {/* <Understanding /> */}
       <Support />
