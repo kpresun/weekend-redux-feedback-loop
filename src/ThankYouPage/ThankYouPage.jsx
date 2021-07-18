@@ -5,17 +5,15 @@ function ThankYouPage() {
 
     const history = useHistory();
 
-    const handleSubmit = () => {
+    const handleClick = () => {
       history.push("/");
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <div>
+            <div onClick={handleClick}>
                 <p>Thank you page</p>
-                <button type="submit">Leave New Feedback</button>
+                <button type="button">Leave New Feedback</button>
             </div>
-        </form>
     )
 }
 
