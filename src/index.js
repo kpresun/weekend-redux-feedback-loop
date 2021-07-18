@@ -33,7 +33,7 @@ const supportReducer = (state = [], action) => {
 };
 
 // captures comment text
-const commentReducer = (state = [], action) => {
+const commentsReducer = (state = [], action) => {
   if (action.type === "SET_COMMENT") {
     return action.payload;
   }
@@ -47,7 +47,7 @@ const storedData = createStore(
     feelingReducer,
     understandingReducer,
     supportReducer,
-    commentReducer,
+    commentsReducer,
   }),
   applyMiddleware(logger)
 );
