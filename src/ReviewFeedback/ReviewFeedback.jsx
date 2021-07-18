@@ -33,7 +33,7 @@ function ReviewFeedback() {
       })
       .catch(error => {
           console.log('unable to post feedback,', error);
-          alert('Unable to submit your feedback, please try again.')
+          alert('Unable to submit your feedback due to missing information, please go back and try again.')
       })
     }
 
