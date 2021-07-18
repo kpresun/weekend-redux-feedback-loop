@@ -19,13 +19,24 @@ function Comments() {
     history.push("/form-review");
   };
 
+  const backButton = (event) => {
+    event.preventDefault();
+
+    history.push("/formPt3")
+  }
+
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <h1>Do you have any last comments?</h1>
       <p><small>Share any thoughts that you have!</small></p>
       <input type="text" placeholder="Comments" value={comments} onChange={event => setComments(event.target.value)}/>
       <button type="submit" value="submit">Next</button>
     </form>
+    <section>
+      <button onClick={backButton}>Back</button>
+    </section>
+    </>
   );
 }
 

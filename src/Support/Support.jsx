@@ -25,13 +25,24 @@ function Support() {
     history.push("/formPt4");
   };
 
+  const backButton = (event) => {
+    event.preventDefault();
+
+    history.push("/formPt2")
+  }
+
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <h1>How well do you feel supported?</h1>
       <p><small>Rating: 1 for "No help at all.." and 5 for "A friend I can always count on!"</small></p>
       <input type="number" id="quantity" name="feelingRating" min="1" max="5" value={support} onChange={event => setSupport(event.target.value)}/>
       <button type="submit" value="submit">Next</button>
     </form>
+    <section>
+      <button onClick={backButton}>Back</button>
+    </section>
+    </>
   );
 }
 
