@@ -14,6 +14,12 @@ function Feeling() {
 //handling the submission of the feeling rating
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if(!feeling) {
+      alert('Please select a number');
+      return;
+    }
+
     dispatch({
       type: "SET_FEELING",
       payload: feeling

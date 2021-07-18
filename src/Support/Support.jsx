@@ -12,6 +12,12 @@ function Support() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if(!support) {
+      alert('Please select a number');
+      return;
+    }
+
     dispatch({
       type: "SET_SUPPORT",
       payload: support

@@ -14,6 +14,12 @@ function Understanding() {
   //submitting understanding
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if(!understanding) {
+      alert('Please select a number');
+      return;
+    }
+
     dispatch({
       type: "SET_UNDERSTANDING",
       payload: understanding
