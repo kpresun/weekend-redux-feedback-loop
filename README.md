@@ -1,6 +1,6 @@
-Prime Academy Feedback Project
+# Prime Academy Feedback Project
 
-Description
+## Description
 
 Duration: 2 days
 
@@ -11,7 +11,7 @@ With this project we are able to solve 3 main things in a simple form:
 - Users cannot proceed without choosing an input.
 - Users can do a final review before submitting their feedbacks.
 
-Installation
+## Installation
 
 1)Create a database with sql commands in data.sql
 2) NPM install
@@ -24,7 +24,7 @@ Installation
     - react-router
     - @material-ui/core
 
-Usage
+## Usage
 
 1) Users start at the beginning of the form and choose their options
 2) Users at the end can review their feedback before submitting. They can also start over if they choose to do so.
@@ -38,10 +38,10 @@ express
 node
 pg
 
-Acknowledgement
+## Acknowledgement
 
 Thank you to our Instructors, Chad, Kris and Edan for helping us understand how to use redux. 
 
-Support
+## Support
 
 If you need support contact Prime. :)
