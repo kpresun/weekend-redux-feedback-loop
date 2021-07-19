@@ -3,6 +3,10 @@ import { useHistory } from "react-router";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+
+//material UI
+import { Button } from "@material-ui/core";
+
 function Support() {
 
   const dispatch = useDispatch();
@@ -37,10 +41,10 @@ function Support() {
       <h1>How well do you feel supported?</h1>
       <p><small>Rating: 1 for "No help at all.." and 5 for "A friend I can always count on!"</small></p>
       <input type="number" id="quantity" name="feelingRating" min="1" max="5" value={support} onChange={event => setSupport(event.target.value)}/>
-      <button type="submit" value="submit">Next</button>
+      <Button type="submit" value="submit" variant="contained" color="primary">Next</Button>
     </form>
     <section>
-      <button onClick={backButton}>Back</button>
+      <Button onClick={backButton} variant="contained" color="secondary">Back</Button>
     </section>
     </>
   );

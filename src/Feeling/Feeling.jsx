@@ -3,6 +3,9 @@ import { useHistory } from "react-router";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+//material UI
+import { Button } from "@material-ui/core";
+
 function Feeling() {
 
   // declaring all my hooks
@@ -34,7 +37,7 @@ function Feeling() {
         <h1>How are you feeling today?</h1>
         <p><small>Rating: 1 for "Terrible.." and 5 for "GREAT"</small></p>
         <input type="number" id="quantity" name="feelingRating" min="1" max="5" value={feeling} onChange={event => setFeeling(event.target.value)}/>
-        <button type="submit">Next</button>
+        <Button type="submit" variant="contained" color="primary">Next</Button>
       </form>
     );
 }

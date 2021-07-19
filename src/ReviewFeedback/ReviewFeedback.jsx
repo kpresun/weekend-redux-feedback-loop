@@ -3,6 +3,9 @@ import { useHistory } from "react-router";
 import { useSelector } from "react-redux";
 import axios from "axios";
 
+//material UI
+import { Button } from "@material-ui/core";
+
 function ReviewFeedback() {
   //importing in all reducer to access their state data
   const feelingRating = useSelector((store) => store.feelingReducer);
@@ -55,13 +58,13 @@ function ReviewFeedback() {
           <p>Understanding: {understandingRating}</p>
           <p>Support: {supportRating}</p>
           <p>Comments: {commentsInput}</p>
-          <button type="submit" value="submit">
+          <Button type="submit" value="submit" variant="contained" color="primary">
             Submit Feedback
-          </button>
+          </Button>
         </div>
       </form>
       <section>
-        <button onClick={backButton}>Start over</button>
+        <Button onClick={backButton} variant="contained" color="secondary">Start over</Button>
       </section>
     </>
   );

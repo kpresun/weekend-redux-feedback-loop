@@ -3,6 +3,9 @@ import { useHistory } from "react-router";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+//material UI
+import { Button } from "@material-ui/core";
+
 function Comments() {
 
   const dispatch = useDispatch();
@@ -31,10 +34,10 @@ function Comments() {
       <h1>Do you have any last comments?</h1>
       <p><small>Share any thoughts that you have!</small></p>
       <input type="text" placeholder="Comments" value={comments} onChange={event => setComments(event.target.value)}/>
-      <button type="submit" value="submit">Next</button>
+      <Button type="submit" value="submit" variant="contained" color="primary">Next</Button>
     </form>
     <section>
-      <button onClick={backButton}>Back</button>
+      <Button onClick={backButton} variant="contained" color="secondary">Back</Button>
     </section>
     </>
   );
